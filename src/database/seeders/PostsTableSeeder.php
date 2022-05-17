@@ -14,6 +14,6 @@ class PostsTableSeeder extends Seeder
      */
     public function run($user_id = null)
     {
-        \App\Models\Post::factory(10)->create(['user_id'=>$user_id]);
+        \App\Models\Post::factory(3)->create(['user_id'=>$user_id]);
     }
 }

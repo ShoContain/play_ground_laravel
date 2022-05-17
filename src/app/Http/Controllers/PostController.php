@@ -10,11 +10,12 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+        return view('posts.index',compact('posts'));
     }
 
     /**
@@ -46,7 +47,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        dd($post);
+        $this->authorize('view',$post);
+        return view('posts.show',compact('post'));
     }
 
     /**
