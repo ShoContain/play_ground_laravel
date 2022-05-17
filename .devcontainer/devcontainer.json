@@ -5,11 +5,17 @@
 	],
 	"service": "app",
 	"workspaceFolder": "/data",
+	"settings": {
+		"php.validate.executablePath": "/usr/local/bin/php",
+		"editor.tabSize": 4
+	},
 	"extensions": [
 		"bmewburn.vscode-intelephense-client",
 		"onecentlin.laravel5-snippets",
 		"onecentlin.laravel-blade",
-		"ryannaddy.laravel-artisan"
+		"ryannaddy.laravel-artisan",
+		"neilbrayfield.php-docblocker",
+		"xdebug.php-debug"
 	],
 	"shutdownAction": "stopCompose"
 }
