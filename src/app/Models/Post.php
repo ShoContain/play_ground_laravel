@@ -23,4 +23,11 @@ class Post extends Model
        return $this->belongsTo(User::class);
    }
 
+   /**
+    * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+    */
+   public function images()
+   {
+       return $this->morphMany('App\Models\Image','imageable');
+   }
 }
